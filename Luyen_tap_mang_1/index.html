@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let arrInt = [-1, 2, -3, 4, 10, 11, 12, 14, 16, 20];
+
+            // Bài 1
+            function intNum(arr) {
+                let count = 0;
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] > 10) {
+                        console.log(arr[i]);
+                        count++;
+                    }
+                }
+
+                console.log('Có ' + count + ' phần tử > 10');
+                return count;
+            }
+
+            // Bài 2
+            function maxItem(arr) {
+                let max = arr[0];
+                let vitri = 0;
+                for (let i = 1; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        max = arr[i];
+                        vitri = i;
+                    }
+                }
+
+                return {
+                    maxItem: max,
+                    vitri: vitri
+                };
+            }
+
+            // Bài 3
+            function maxItemAndTb(arr) {
+                let max = arr[0];
+                let sum = arr[0];
+
+                for (let i = 1; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        max = arr[i];
+                    }
+                    sum += arr[i];
+                }
+
+                let tb = sum / arr.length;
+
+                return {
+                    max: max,
+                    tb: tb
+                };
+            }
+
+            // Bài 4
+
+            function reverseArr(arr) {
+
+                let newArr = []
+                for (let i = arr.length; i >= 0; i--) {
+                    newArr.push(arr[i])
+                    
+                }
+                return newArr
+            }
+
+            // Bài 5
+            function count(arr){
+                let count = 0
+                for (let i = 0; i < arr.length; i++) {
+                    if(arr[i] < 0) {
+                        count++
+                    }
+                    
+                }
+                return count
+
+            }
+
+            // Bài 6
+            let arr = [1,2,3,4,5]
+            
+
+            function checkV(arr) {
+                let isCheck = false
+                for (let i = 0; i < arr.length; i++) {
+                    if(arr[i] === 4){
+                        isCheck = true
+                        console.log(" 4 có trong mảng")
+                    }
+                }
+                if(!isCheck) {
+                        console.log(" 4 không có trong mảng")
+
+                }
+            }
+
+            // Bài 7
+
+             function checkVandpushZero(arr) {
+                for (let i = 0; i < arr.length; i++) {
+                    if(arr[i] === 4){
+                       arr.splice(i,1)
+                       arr.push(0)
+                    }
+                }
+             return arr
+            }
+
+
+            // Bài 8
+           function minToMax(arr) {
+            let min
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if(arr[i] < arr[j]){
+                        min = arr[i]
+                        arr[i] = arr[j]
+                        arr[j] = min
+                    }
+                    
+                }
+                
+            }
+            return arr
+           }
+            // Bài 9
+            let arr2 = [6,7,8,9,10]
+            let newArr = arr.concat(arr2)
+           
+           
+         </script>
+    </body>
+</html>
